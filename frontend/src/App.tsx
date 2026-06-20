@@ -189,9 +189,7 @@ function AircraftModel({
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            count={2}
-            array={new Float32Array([0, -arrival.altitude * ALTITUDE_SCALE + 0.08, 0, 0, -0.2, 0])}
-            itemSize={3}
+            args={[new Float32Array([0, -arrival.altitude * ALTITUDE_SCALE + 0.08, 0, 0, -0.2, 0]), 3]}
           />
         </bufferGeometry>
         <lineBasicMaterial color={phaseColors[arrival.phase]} transparent opacity={0.28} />
